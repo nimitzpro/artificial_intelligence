@@ -104,7 +104,7 @@ $ cd artificial_intelligence
 
 3. Run Jupyter notebooks by typing:
 ```
-(venv) $ Jupyter notebook
+(venv) $ jupyter notebook
 ```
 
 4. When you have finished using the Jupyter notebook, deactivate the virtual environment. See (9) above.
