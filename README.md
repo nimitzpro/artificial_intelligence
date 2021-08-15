@@ -12,7 +12,7 @@ I will show the prompt as a $.
 
 ## Git
 
-The module resources are in a repository on github. One option is to visit [https://github.com/derekgbridge/artificial_intelligence](https://github.com/derekgbridge/artificial_intelligence); click on the green button; choose "Download ZIP". However, I will be incrementally adding new resources each week, so you would need to download and unzip each week.
+The module resources are in a repository on github. One option is to visit [https://github.com/derekgbridge/artificial_intelligence](https://github.com/derekgbridge/artificial_intelligence); click on the green button; choose "Download ZIP". However, I will be incrementally adding new resources or modifying existing resources each week, so you would need to download and unzip each week.
 
 Better is to install git: [https://git-scm.com/](https://git-scm.com/)
 
