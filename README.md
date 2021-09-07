@@ -30,10 +30,7 @@ $ git pull
 
 ## Installation of Python packages
 
-1. Install the following if you don't already have them:
-* Python
-* pip
-* venv
+1. Install Python3 if you don't already have it. You also need pip and venv but these are part of the latest installations of Python.
 
 2. Go into your folder:
 ```
@@ -42,9 +39,10 @@ $ cd artificial_intelligence
 
 3. Create a Python virtual environment. E.g. at the command prompt, type:
 ```
-$ python3 -m venv venv
+$ python3 -m venv venv # on Linux/macOS
+$ python -m venv venv # on Windows
 ```
-This is going to mean that Python packages that we install are only applied to this environment. It is good practice. It enables you to have lots of different projects with their own environments, without them conflicting with each other.
+This is going to mean that additional Python packages that we install are only applied to this environment.  Installing additional packages into an environment is good practice. It enables you to have lots of different projects with their own environments, without them conflicting with each other.
 
 4. Activate the virtual environment by typing:
 ```
@@ -58,33 +56,37 @@ If activation is successful, you'll see the name of the environment before the p
 
 5. Install the packages we need by typing:
 ```
-(venv) $ python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn seaborn
+(venv) $ python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn seaborn # on Linux/macOS
+(venv) $ python -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn seaborn # on Windows
 ```
 
 6. Check they are installed by typing:
 ```
-(venv) $ python3 -c "import jupyter, matplotlib, numpy, pandas, scipy, sklearn, seaborn"
+(venv) $ python3 -c "import jupyter, matplotlib, numpy, pandas, scipy, sklearn, seaborn" # on Linux/macOS
+(venv) $ python -c "import jupyter, matplotlib, numpy, pandas, scipy, sklearn, seaborn" # on Windows
 ```
 Make sure there are no error messages.
 
 7. Install tensorflow by typing:
 ```
-(venv) $ python3 -m pip install -U tensorflow
+(venv) $ python3 -m pip install -U tensorflow # on Linux/macOS
+(venv) $ python -m pip install -U tensorflow # on Windows
 ```
-If it doesn't work take a suitable URL from [https://www.tensorflow.org/install/pip#package-location](https://www.tensorflow.org/install/pip#package-location) and try this:
-```
-$ python3 -m pip install -U THE-URL-HERE
-```
+If it doesn't work take a suitable URL from [https://www.tensorflow.org/install/pip#package-location](https://www.tensorflow.org/install/pip#package-location) and replace the word tensorflow above by the URL.
+
 If it still does not work, then, sorry, but you will be confined to using Google Colab for the part of the module that uses tensorflow.
 
 8. If there were no errors when installing tensorflow, it's still worth checking it is installed by typing:
 ```
-(venv) $ python3 -c "import tensorflow"
+(venv) $ python3 -c "import tensorflow" # on Linux/macOS
+(venv) $ python3 -c "import tensorflow" # on Windows
 ```
+There may be a warning message to the effect that your laptop does not have a GPU. Don't worry about this.
 
 9. Deactivate the virtual environment either by closing the terminal or by typing:
 ```
-(venv) $ deactivate
+(venv) $ deactivate # on Linux/macOS
+(venv) $ .\venv\Scripts\deactivate # on Windows
 ```
 If you are successful, the environment name disappears from the prompt:
 ```
@@ -104,7 +106,8 @@ $ cd artificial_intelligence
 
 3. Run Jupyter notebooks by typing:
 ```
-(venv) $ jupyter notebook
+(venv) $ jupyter notebook # on Linux/macOS
+(venv) $ jupyter-notebook # on Windows
 ```
 
 4. When you have finished using the Jupyter notebook, deactivate the virtual environment. See (9) above.
@@ -145,7 +148,7 @@ You can run in the cloud instead. Got to Google colab. You can create or upload 
  
 You can choose a runtime, where you can ask for a GPU.
 
-If you have your own datasets, copy them to you Google Drive.
+If you have your own datasets, copy them to your Google Drive.
 
 Then in your Jupyter notebook, include a cell that contains the following:
 ```python
@@ -156,6 +159,6 @@ When you execute this cell, Colab will show you a URL. Go to that URL (it may pr
 
 One problem with Colab is that it disconnects you if you don't interact with it for 90 minutes (even if something is running) and after 12 hours, even if you are interacting with it.
 
-The solution is in Version 1 of response 14 here: [https://stackoverflow.com/questions/57113226/how-to-prevent-google-colab-from-disconnecting](https://stackoverflow.com/questions/57113226/how-to-prevent-google-colab-from-disconnecting)
+Some possible solution are here: [https://stackoverflow.com/questions/57113226/how-to-prevent-google-colab-from-disconnecting](https://stackoverflow.com/questions/57113226/how-to-prevent-google-colab-from-disconnecting) But Google keep changing things: solutions that used to work can stop working. If you find one that works, share it with the class!
 
 
