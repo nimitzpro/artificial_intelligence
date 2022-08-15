@@ -37,7 +37,9 @@ $ git pull
 $ cd artificial_intelligence
 ```
 
-3. Create a Python virtual environment. E.g. at the command prompt, type:
+3. If you have an M1 Mac, then you need to follow different instructions in order to install tensorflow. Try these: [https://betterdatascience.com/install-tensorflow-2-7-on-macbook-pro-m1-pro/](https://betterdatascience.com/install-tensorflow-2-7-on-macbook-pro-m1-pro/). You will still need to install jupyter, matplotlib, numpy, pandas, scipy, sklearn, seaborn. I later got a numpy import error and needed a complete re-install: [https://nkaushik.com/python/numpy-importerror-c-extensions-failed/](https://nkaushik.com/python/numpy-importerror-c-extensions-failed/)
+
+Otherwise, create a Python virtual environment. E.g. at the command prompt, type:
 ```
 $ python3 -m venv venv # on Linux/macOS
 $ python -m venv venv # on Windows
@@ -56,34 +58,18 @@ If activation is successful, you'll see the name of the environment before the p
 
 5. Install the packages we need by typing:
 ```
-(venv) $ python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn seaborn # on Linux/macOS
-(venv) $ python -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn seaborn # on Windows
+(venv) $ python3 -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn seaborn tensorflow # on Linux/macOS
+(venv) $ python -m pip install -U jupyter matplotlib numpy pandas scipy scikit-learn seaborn tensorflow # on Windows
 ```
 
 6. Check they are installed by typing:
 ```
-(venv) $ python3 -c "import jupyter, matplotlib, numpy, pandas, scipy, sklearn, seaborn" # on Linux/macOS
-(venv) $ python -c "import jupyter, matplotlib, numpy, pandas, scipy, sklearn, seaborn" # on Windows
+(venv) $ python3 -c "import jupyter, matplotlib, numpy, pandas, scipy, sklearn, seaborn, tensorflow" # on Linux/macOS
+(venv) $ python -c "import jupyter, matplotlib, numpy, pandas, scipy, sklearn, seaborn, tensorflow" # on Windows
 ```
 Make sure there are no error messages.
 
-7. Install tensorflow by typing:
-```
-(venv) $ python3 -m pip install -U tensorflow # on Linux/macOS
-(venv) $ python -m pip install -U tensorflow # on Windows
-```
-If it doesn't work take a suitable URL from [https://www.tensorflow.org/install/pip#package-location](https://www.tensorflow.org/install/pip#package-location) and replace the word tensorflow above by the URL.
-
-If it still does not work, then, sorry, but you will be confined to using Google Colab for the part of the module that uses tensorflow.
-
-8. If there were no errors when installing tensorflow, it's still worth checking it is installed by typing:
-```
-(venv) $ python3 -c "import tensorflow" # on Linux/macOS
-(venv) $ python3 -c "import tensorflow" # on Windows
-```
-There may be a warning message to the effect that your laptop does not have a GPU. Don't worry about this.
-
-9. Deactivate the virtual environment either by closing the terminal or by typing:
+7. Deactivate the virtual environment either by closing the terminal or by typing:
 ```
 (venv) $ deactivate # on Linux/macOS
 (venv) $ .\venv\Scripts\deactivate # on Windows
@@ -102,7 +88,7 @@ If you have problems with the above, then note that you can use Google Colab for
 $ cd artificial_intelligence
 ```
 
-2. Activate the virtual environment, as you did in (4) above. A classic error is to forget to do this.
+2. Activate the virtual environment, as you did in (4) above. A classic error is to forget to do this. (M1 Mac people: you installed conda, and so you activate using the "conda activate" command.)
 
 3. Run Jupyter notebooks by typing:
 ```
